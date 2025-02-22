@@ -6,14 +6,15 @@ namespace MathPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Digite os números que deseja saber o MMC: \nPrimeiro Número:");
-            int primeiroNum = int.Parse(Console.ReadLine());
-            Console.WriteLine("Segundo Número: ");
+            //Console.WriteLine("Digite os números que deseja saber o MMC: \nPrimeiro Número:");
+            //int primeiroNum = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Segundo Número: ");
 
-            int segundoNum= int.Parse(Console.ReadLine());
+            //int segundoNum= int.Parse(Console.ReadLine());
 
-            int MMC = RetornarMMC(primeiroNum, segundoNum);
-            Console.WriteLine("O MMC de {0} e {1} é {2}", primeiroNum, segundoNum, MMC);
+            //int MMC = RetornarMMC(primeiroNum, segundoNum);
+            //Console.WriteLine("O MMC de {0} e {1} é {2}", primeiroNum, segundoNum, MMC);
+            PrimeNumberFunctions.LogarPrimos(1000000);
         }
 
         public static int RetornarMMC(int primeiroNum, int segundoNum)
