@@ -2,25 +2,21 @@
 {
     public static class PrimeNumberFunctions
     {
-        public static int RetornarProximoPrimo(int num = 1)
+        public static int RetornarProximoPrimo(int num)
         {
-            if (num < 1)
+            while (true)
             {
-                num = 1;
+                if (!ValidarNumeroPrimo(num))
+                {
+                    num++;
+                    continue;
+                }
+                return num;
             }
-
-            do
-            {
-                num++;
-            } while (!ValidarNumeroPrimo(num));
-
-            return num;
         }
 
         public static bool ValidarNumeroPrimo(int num)
         {
-
-
             if (num <= 1) return false;
             if (num <= 2) return true;
             if (num % 2 == 0 || num % 3 == 0) return false;
@@ -39,38 +35,21 @@
             }
 
             return true;
-            //for (int i = 2; i < num; i++)
-            //{
-            //    if (num % i == 0)
-            //    {
-            //        return false;
-            //    }
-            //}
-            //return true;
         }
 
         public static void LogarPrimos(int num)
         {
-            for (int i = 2; i < num; i++)
+            for (int i = 0; i < num; i++)
             {
-                if (!ValidarNumeroPrimo(i))
-                {
-                    continue;
-                }
-                Console.WriteLine(i);
+                if (ValidarNumeroPrimo(i)) Console.WriteLine(i);
             }
         }
 
         public static void LogarMaiorPrimo(int num)
         {
-            for (int i = num; i > 2; i--)
+            for (int i = num; i > 0; i--)
             {
-                if (!ValidarNumeroPrimo(i))
-                {
-                    continue;
-                }
-                Console.WriteLine(i);
-                break;
+                if (ValidarNumeroPrimo(i)) Console.WriteLine(i);
             }
         }
     }
